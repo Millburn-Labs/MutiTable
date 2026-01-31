@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Attendance</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .section {
+            margin: 20px 0;
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 5px;
+        }
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+        .connect-btn {
+            background-color: #5546ff;
+        }
+        .connect-btn:hover {
+            background-color: #4536ef;
+        }
+        .status {
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        .success {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .error {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        .info {
+            background-color: #d1ecf1;
+            color: #0c5460;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📚 Student Attendance</h1>
+        
+        <div class="section">
+            <h3>Wallet Connection</h3>
+            <button id="connectBtn" class="connect-btn">Connect Wallet</button>
+            <div id="walletStatus" class="status info" style="display: none;"></div>
+        </div>
+
+        <div class="section">
+            <h3>Mark Attendance</h3>
+            <input type="text" id="studentName" placeholder="Student Name" />
+            <input type="text" id="date" placeholder="Date (YYYY-MM-DD)" />
+            <button id="markBtn" disabled>Mark Attendance</button>
+            <div id="markStatus"></div>
+        </div>
+
+        <div class="section">
+            <h3>Check Attendance</h3>
+            <input type="text" id="checkStudentName" placeholder="Student Name" />
+            <input type="text" id="checkDate" placeholder="Date (YYYY-MM-DD)" />
+            <button id="checkBtn">Check Attendance</button>
+            <div id="checkStatus"></div>
+        </div>
+    </div>
+
+    <script type="module" src="./app.js"></script>
+</body>
+</html>
